@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Web Finance</title>
+</head>
+<body style="background-color: #312450">
+    <header style="background-image: url(assets/img/bghome.png);">
+        <div id="line"></div>
+        <div id="menu_barra">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="#listar">Análise Financeira</a>
+                <a href="#">Dúvidas</a>
+            </nav>
+        </div>
+        <div id="titulo_finance">
+            <div class="basic-text">
+                <h1>Financial Solutions</h1>
+                <a href="#listar"><button type="button" id="btntabelar" >Análise de Despesas</button></a>
+                <a href="#dicas"><button type="button" id="btndicas" >Dicas</button></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="listar">
+            <div id="form_estrutura">
+                <div class="form_lista card">
+                    <form id="form_listagem">
+                        <h3>Lista de Despesas</h3>
+                        <input type="text" id="name" placeholder=" Nome " required>
+                        <br> <br>
+                        <input type="number" id="receita" placeholder=" Receita (Salários, arrecadações mensais etc...) " required> 
+                        <input type="number" id="despesas" placeholder=" Despesa " required>
+                        <br> <br>
+                        <input type="text" id="descricao" placeholder=" Descrição: casa, alimentação, transporte..."> 
+                        <input type="date" id="data">
+                        <br> <br>
+                        <input type="submit" value="Salvar" id="btn_salvar">
+                        <input type="button" value="Listar" id="btn_listar">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="listing">
+                <div class="list-card full" style="margin-bottom: 60px;"> <!--completa-->
+                    <h1>Dados Gerais</h1>
+                    <br>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome </th>
+                                <th>Receita </th>
+                                <th>Despesas </th>
+                                <th>Descrições </th>
+                                <th>Datas </th>
+                            </tr>
+                        </thead>
+                    
+                    <tbody id="full">
+
+                    </tbody>
+                </table>
+                </div>
+                <div class="list-card expenses" style="margin-bottom: 60px;"> <!--gastos-->
+                    <h1>Despesas</h1>
+                    <br>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Despesas </th>
+                                <th>Descrições </th>
+                                <th>Datas </th>
+                            </tr>
+                        </thead>
+                        <tbody id="expenses">
+
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="js/financescript.js"></script>
+</body>
+</html>
